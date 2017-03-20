@@ -1,11 +1,12 @@
-var express = require('express');
-var multer = require('multer');
-var upload = multer(); // leave out options so files aren't saved to disk
-var app = express();
+const express = require('express');
+const multer = require('multer');
+
+const upload = multer(); // leave out options so files aren't saved to disk
+const app = express();
 
 app.use('/', express.static(__dirname));
 
-app.post('/get-file-size', upload.single('file'), function (req, res, next) {
+app.post('/get-file-size', upload.single('file'), (req, res) => {
   res.json({ size: req.file.size });
 });
 
