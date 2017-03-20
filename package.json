@@ -1,0 +1,12 @@
+{
+  "name": "file-metadata-microservice",
+  "version": "1.0.0",
+  "description": "allows users to upload a file and get its size in bytes",
+  "main": "server.js",
+  "author": "Jasim Taqi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "multer": "^1.3.0"
+  }
+}
